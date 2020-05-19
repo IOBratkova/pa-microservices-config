@@ -1,0 +1,36 @@
+spring:
+  datasource:
+    username: postgres
+    password: root
+    url: jdbc:postgresql://localhost:5432/pa-employee-db
+  jpa:
+    database: POSTGRESQL
+    generate-ddl: false
+    hibernate.ddl-auto: none
+    show-sql: false
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
+  liquibase:
+    changeLog: classpath:/db/migration/db.changelog-master.xml
+    url: ${spring.datasource.url}
+    user: ${spring.datasource.username}
+    password: ${spring.datasource.password}
+    dropFirst: false
+security:
+  oauth2:
+    authorization:
+      jwt:
+        key-store: classpath:jwt/jwt.jks
+        key-alias: jwt
+        key-store-password: storePassword
+
+server:
+  servlet:
+    session:
+      cookie:
+        secure: false
+        http-only: false
+  port: 7777

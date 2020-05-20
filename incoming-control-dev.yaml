@@ -19,6 +19,9 @@ spring:
   
   security:
     oauth2:
+      client:
+        registered-redirect-uri: http://localhost:8082/
+        pre-established-redirect-uri: http://localhost:8082/
       resource:
         userInfoUri: http://localhost:8081/user/info
 

@@ -16,8 +16,16 @@ spring:
     url: ${spring.datasource.url}
     user: ${spring.datasource.username}
     password: ${spring.datasource.password}
-  
-  security:
+
+server:
+  servlet:
+    session:
+      cookie:
+        secure: false
+        http-only: false
+  port: 8082
+
+security:
     oauth2:
       client:
         accessTokenUri: http://localhost:8081/oauth/check_token
@@ -28,11 +36,3 @@ spring:
         pre-established-redirect-uri: http://localhost:8082/
       resource:
         userInfoUri: http://localhost:8081/user/info
-
-server:
-  servlet:
-    session:
-      cookie:
-        secure: false
-        http-only: false
-  port: 8082

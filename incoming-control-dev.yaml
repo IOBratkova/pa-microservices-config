@@ -30,6 +30,7 @@ security:
       client:
         clientId: 1990922091019159
         clientSecret: 84a6b816305c2658f45ced45db6ab8ab 
+        userAuthorizationUri: http://localhost:8081/oauth/check_token
         accessTokenUri: http://localhost:8081/oauth/check_token
         tokenName: token
         authenticationScheme: query

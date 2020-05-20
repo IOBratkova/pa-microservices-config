@@ -20,6 +20,10 @@ spring:
   security:
     oauth2:
       client:
+        accessTokenUri: http://localhost:8081/oauth/check_token
+        tokenName: token
+        authenticationScheme: query
+        clientAuthenticationScheme: form
         registered-redirect-uri: http://localhost:8082/
         pre-established-redirect-uri: http://localhost:8082/
       resource:

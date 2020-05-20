@@ -16,6 +16,11 @@ spring:
     url: ${spring.datasource.url}
     user: ${spring.datasource.username}
     password: ${spring.datasource.password}
+  
+  security:
+    oauth2:
+      resource:
+        userInfoUri: https://localhost:8081/user/info
 
 server:
   servlet:

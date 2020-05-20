@@ -20,7 +20,7 @@ spring:
   security:
     oauth2:
       resource:
-        userInfoUri: https://localhost:8081/user/info
+        userInfoUri: http://localhost:8081/user/info
 
 server:
   servlet:

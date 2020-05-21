@@ -1,1 +1,26 @@
+spring:
+  profiles:
+    active: dev
 
+  datasource:
+    username: postgres
+    password: root
+    url: jdbc:postgresql://localhost:5432/pa-material-directory-db
+
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+
+  liquibase:
+    changeLog: classpath:/db/changelog/db.changelog-master.xml
+    url: ${spring.datasource.url}
+    user: ${spring.datasource.username}
+    password: ${spring.datasource.password}
+    
+    server:
+  servlet:
+    session:
+      cookie:
+        secure: false
+        http-only: false
+  port: 8083

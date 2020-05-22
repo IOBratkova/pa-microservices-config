@@ -18,7 +18,7 @@ spring:
     url: ${spring.datasource.url}
     user: ${spring.datasource.username}
     password: ${spring.datasource.password}
-    dropFirst: true
+    dropFirst: false
 security:
   oauth2:
     authorization:

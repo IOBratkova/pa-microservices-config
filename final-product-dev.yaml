@@ -16,6 +16,7 @@ spring:
     url: ${spring.datasource.url}
     user: ${spring.datasource.username}
     password: ${spring.datasource.password}
+    first-drop: true
 
 server:
   servlet:
